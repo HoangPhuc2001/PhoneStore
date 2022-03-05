@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fafafa"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".User.Fragment.OrderFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarCTSP"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00a5ff"
+        >
+        <com.romainpiel.shimmer.ShimmerTextView
+            android:id="@+id/shimmer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:maxLines="1"
+            android:text="Trạng thái đơn hàng"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <com.tomer.fadingtextview.FadingTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:texts="@array/textoder"
+        app:timeout="2000" />
+
+    <RelativeLayout
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textAlignment="center"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:textSize="17dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textColor="#00a5ff"-->
+<!--            android:text="Bạn chưa đăt mua sản phẩm nào."/>-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lv_orderdetail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+    </FrameLayout>
+
+<!--   <LinearLayout-->
+<!--       android:layout_alignParentBottom="true"-->
+<!--       android:weightSum="10"-->
+<!--       android:orientation="horizontal"-->
+<!--       android:layout_width="match_parent"-->
+<!--       android:layout_height="wrap_content">-->
+<!--       <Button-->
+<!--           android:id="@+id/btnLienheOrder"-->
+<!--           android:layout_width="match_parent"-->
+<!--           android:layout_height="48dp"-->
+<!--           android:background="@drawable/bg_trangthaidonhang"-->
+<!--           android:gravity="center"-->
+<!--           android:text="Liên hệ"-->
+<!--           android:layout_marginLeft="25dp"-->
+<!--           android:layout_marginRight="25dp"-->
+<!--           android:textColor="#ffffff"-->
+<!--           android:textAllCaps="false"-->
+<!--           android:textSize="18dp"-->
+<!--            />-->
+<!--   </LinearLayout>-->
+    </RelativeLayout>
+</LinearLayout>
